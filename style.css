@@ -292,3 +292,66 @@ img.elephant {
     margin: 0;
     cursor: pointer;
 }
+
+/* Feedback page styles */
+#main-feedback {
+    margin-top: 120px;
+    position: relative;
+    padding: 20px 16px 80px;
+    min-height: calc(100vh - 120px - 40px);
+    background-image: url(images/map-blur.png);
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
+/* keep translucent map layer behind content */
+#main-feedback::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('images/map.png') center/cover no-repeat;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 0;
+    filter: brightness(0.95);
+}
+
+#main-feedback #content {
+    position: relative;
+    z-index: 1;
+    padding-top: 1px;
+    padding-bottom: 50px;
+}
+
+#main-feedback form {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#main-feedback form label {
+    font-weight: bold;
+    color: #333;
+}
+
+#main-feedback form input[type="text"],
+#main-feedback form input[type="email"],
+#main-feedback form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#main-feedback form input[type="submit"] {
+    background-color: darkgreen;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
