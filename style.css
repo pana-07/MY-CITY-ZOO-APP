@@ -181,3 +181,78 @@ img.elephant {
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
+
+
+
+#main-places {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background-size: cover;
+}
+
+/* Fixed medium-sized transparent card */
+.place-card {
+    width: 320px; /* Fixed medium width */
+    min-height: 420px; /* Fixed medium height */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(5px); /* Blur effect behind card */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for cards */
+.place-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image inside card */
+.place-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Content section */
+.place-content {
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+/* List styling */
+.place-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.place-card li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* Links inside cards */
+.place-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #2a7fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.place-card a:hover {
+    border-bottom: 1px solid #2a7fff;
+}
